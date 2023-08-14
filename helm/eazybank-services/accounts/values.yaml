@@ -1,0 +1,18 @@
+
+
+deploymentName: accounts-deployment
+deploymentLabel: accounts
+
+replicaCount: 1
+
+image:
+ repository: emaaddocker/accounts
+ tag: latest
+
+
+containerPort: 8080
+
+service:
+  type: LoadBalancer
+  port: 4646
+  targetPort: 8080
